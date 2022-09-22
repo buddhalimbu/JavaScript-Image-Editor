@@ -244,6 +244,25 @@ closeTools.addEventListener("click", function(){
     mytools.classList.remove("show");
     document.body.appendChild(span);
 });
+const dbtn = document.querySelector(".dbtn");
+
+dbtn.addEventListener("click", () => {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = myimg.naturalWidth;
+    canvas.height = myimg.naturalHeight;
+    
+    ctx.filter = `brightness(${brightness}%) saturate(${saturate}%) invert(${invert}%) grayscale(${grayscale}%)`;
+    
+    ctx.drawImage(myimg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+    
+    const link = document.createElement("a");
+    link.download = "image.jpg";
+    link.href = canvas.toDataURL();
+    link.click();
+});
+ 
+
 }
 
 
