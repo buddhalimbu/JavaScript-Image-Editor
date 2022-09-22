@@ -261,6 +261,8 @@ left:0
        }
        
        #display-image img{
+       max-width:450px;
+       max-height:400px;
        display:block;
        width:100%;
        height:100%;
