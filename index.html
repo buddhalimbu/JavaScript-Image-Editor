@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Simple Image Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+           <!--linkin css-->
+        <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+    
+   <div class="container">   
+    <div class="uploader">
+      <div class="upload-holder">
+          <h1>IMAGE EDITOR</h1>
+          <p>
+              Edit your image online with using the tools below which is developed with JavaScript.</p>
+              <div class="upload-wrapper">
+         
+     <input type="file" id="img-input" accept="image/jpeg, image/png, image/jpg"/> <label for="img-input" class="imguploadname">   Upload Image + </label>
+    </div>
+    </div>
+    </div>
+    
+<div id="display-image">
+    
+    
+    <div class="imgHolder">
+    <img id="my-image"/>
+    </div>
+    <span id="download">Download Image</span>
+</div>
+
+
+
+    <div class="img-tools">
+        <span class="closeTools">&times;
+        </span>
+        <div class="newImage">
+            <label class="label"> Change Or New Image :</label>
+            <div>
+            <input class="imgurl" type="text" placeholder=" Image Url ...."/>
+            <input type="button" value="Add Image" class="addnewimage"/></div>
+        </div>
+      <div class="img-ranges">
+        <div>
+            <label class="label img-label">Image Filter :</label>
+        <span>Brightness</span>
+        <span id="range-bt">100%</span>
+        <input type="range" value="100" min="0" id="bt" max="200"/>
+        </div>
+        <div>
+          <span>Hue</span>
+          <span id="range-ak">0%</span>
+          <input type="range" value="0" id="hue"/>
+        </div>
+        
+        <div>
+          <span>blur</span>
+          <span id="range-blur">0px</span>
+          <input type="range" value="0" min="0" max="10" id="blur"/>
+        </div>
+        <div>
+          <span>Sepia</span>
+          <span id="range-sepia">0%</span>
+          <input type="range" value="10" id="sepia"/>
+        </div>
+        
+        <div>
+          <span>Contrast</span>
+          <span id="range-contrast">100%</span>
+          <input type="range" value="100" min="0" max="200" id="contrast"/>
+        </div>
+        <div>
+          <span>Saturate</span>
+          <span id="range-saturate">0%</span>
+          <input type="range" value="0" id="saturate"/>
+        </div>
+        
+        
+        <div>
+          <span>Grayscale</span>
+          <span id="range-gr">0%</span>
+          <input type="range" value="0" id="gr"/>
+        </div>
+        <div>
+          <span>invert</span>
+          <span id="range-inv">0%</span>
+          <input type="range" value="0" id="invert"/>
+        </div>
+      </div>
+      
+      <div class="text-ranges">
+          <label class="label">Opacity :</label>
+          <input type="range" value="100" min="0" max="100" id="range"/>
+    
+      </div>
+      
+      <div class="addtxt">
+          <label class="label">Border Radius :</label>
+          <div class="add-wrap">
+          <input type="range" id="textItem" min="0" max="100" value="0"/>
+          
+          </div>
+      </div>
+      
+      <div class="option-ranges">
+          <label class="label">Image Border :</label>
+          <div class="myoption">
+      <select id="select">
+        <b><option value="optionnone" id="optionnone">NONE</option></b>
+        <option value="pinkBorder" id="option1">Pink border</option>
+        <option value="redBorder" id="option2">Red border</option>
+        <option value="greenBorder" id="option3">Green border</option>
+        <option value="blackBorder" id="option3">Black border</option>
+        <option value="blueBorder" id="option3">Blue border</option>
+        <option value="grayBorder" id="option3">Gray border</option>
+        <option value="orangeBorder" id="option3">Orange border</option>
+        <option value="purpleBorder" id="option3">Purple border</option>
+    </select>
+    <button type="button" class="addbgbtn">Add Border</button>
+    </div>
+    </div>
+   </div>
+    </div>
+</body>
+</html>
