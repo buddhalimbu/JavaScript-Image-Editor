@@ -252,7 +252,7 @@ dbtn.addEventListener("click", () => {
     canvas.width = myimg.naturalWidth;
     canvas.height = myimg.naturalHeight;
     
-    ctx.filter = `brightness(${brightness}%) saturate(${saturate}%) invert(${invert}%) grayscale(${grayscale}%)`;
+    ctx.filter = `brightness(${brightness}%) saturate(${saturate}%) invert(${invert}%) grayscale(${grayscale}%) hue-rotate(${hue}%) blur(${blur}px) contrast(${contrast}%) sepia(${sepia}%)`;
     
     ctx.drawImage(myimg, 0, 0,myimg.naturalWidth,myimg.naturalHeight);
     const link = document.createElement("a");
