@@ -254,7 +254,7 @@ dbtn.addEventListener("click", () => {
     
     ctx.filter = `brightness(${brightness}%) saturate(${saturate}%) invert(${invert}%) grayscale(${grayscale}%)`;
     
-    ctx.drawImage(myimg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+    ctx.drawImage(myimg, -canvas.width / 1, -canvas.height / 1, canvas.width, canvas.height);
     
     const link = document.createElement("a");
     link.download = "image.jpg";
